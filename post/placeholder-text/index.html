@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.63.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Snippet: To check if App is installed via TestFlight&nbsp;&ndash;&nbsp;Tanveer NotePad</title><link rel="stylesheet" href="/css/core.min.56b841b41b27afea37d0519f65b4fa2ebc7db87c81a5ffb433596e81c42bcad207fd7aca7bf39c5a469f1d0944badcf5.css" integrity="sha384-VrhBtBsnr&#43;o30FGfZbT6Lrx9uHyBpf&#43;0M1lugcQrytIH/XrKe/OcWkafHQlEutz1"><body>
+    <div class="base-body"><section id="header" class="site header max-body-width">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Tanveer NotePad</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about">About</a></nav></div></span></div></section><div id="content" class="max-body-width"><section class="article header">
+    <h1 class="article title">Snippet: To check if App is installed via TestFlight</h1><p class="article date">Sunday, January 26, 2020</p></section><article class="article markdown-body"><p>Apple provides a way to validate receipts, related to that the follwing code snippet can be used to verify app is installed from TestFlight or not.</p>
+<pre><code>func isInstalledFromTestFlight() -&gt; Bool {
+  guard let appStoreReceiptURL = Bundle.main.appStoreReceiptURL else {
+    return false
+  }
+  return appStoreReceiptURL.lastPathComponent == &quot;sandboxReceipt&quot;
+}
+</code></pre><h2 id="related">Related</h2>
+<p><a href="https://developer.apple.com/documentation/storekit/in-app_purchase/validating_receipts_with_the_app_store"target="_blank">Validating Receipts with the App Store</a></p>
+</article><section class="article labels"><a class="category" href=/categories/ios/>iOS</a><a class="tag" href=/tags/snippets/>snippets</a></section></div><section id="footer" class="footer max-body-width"><div class="footer-wrap">
+    <p class="copyright">©2020 Tanveer.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>
